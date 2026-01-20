@@ -8,9 +8,24 @@ body {
 header {
   background-color: #1f3a5f;
   color: white;
-  padding: 40px;
+  padding: 35px;
   text-align: center;
   position: relative;
+}
+/* =========================
+   Header Dog GIF
+========================= */
+
+.header-dog {
+  position: absolute;
+  left: 25px;     /* ← 可微調：左右位置 */
+  bottom: -5px;   /* ← 可微調：上下位置 */
+
+  width: 70px;    /* ← 可微調：大小 */
+  height: auto;
+
+  pointer-events: none; /* 不影響點擊 */
+  opacity: 0.9;         /* 若太搶眼可調 */
 }
 
 /* ===== icon 區 ===== */
