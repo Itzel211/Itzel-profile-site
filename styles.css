@@ -266,31 +266,27 @@ header p {
 }
 
 @media (max-width: 600px) {
-  header {
-    padding: 30px 20px;
-  }
 
-  header h1 {
-    font-size: 1.6rem;
+  /* ===== Projects 手機版優化 ===== */
+  .projects {
+    grid-template-columns: 1fr;   /* 一排一張 */
+    gap: 20px;
   }
-
-  header p {
-    font-size: 0.95rem;
+  .project-card {
+    border-radius: 14px;
   }
-
-  .social-links {
-    position: static;
-    justify-content: center;
-    margin-top: 15px;
-  }
-
   .project-card img {
-    height: 190px;
+    height: 210px;                /* 圖片加高，不再扁 */
   }
-
-  .header-dog {
-    width: 35px;
-    left: 15px;
-    bottom: -5px;
+  .project-card div {
+    padding: 16px 18px;           /* 內距加大，字不擠 */
+  }
+  .project-card h3 {
+    font-size: 1.05rem;
+  }
+  .project-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
+
