@@ -29,6 +29,16 @@ header {
   pointer-events: none;
   opacity: 0.9;
 }
+/* Header 右下角 dog2 */
+.header-dog2 {
+  position: absolute;
+  right: 25px;
+  bottom: -5px;
+  width: 80px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.9;
+}
 
 /* =========================
    Social Icons
@@ -250,6 +260,13 @@ Responsive Design（RWD）
   .header-dog {
     width: 65px;
     left: 18px;
-    bottom: -8px;
+    bottom: 0px;
   }
+  /* 手機板縮小 */
+  .header-dog2 {
+    width: 65px;
+    right: 18px;
+    bottom: 0px;
+  }
+
 }
