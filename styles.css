@@ -88,8 +88,8 @@ h2 {
 }
 
 .profile-photo {
-  width: 165px;
-  height: 225px;
+  width: 220px;
+  height: 300px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
