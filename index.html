@@ -3,143 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <title>Jia-En Zhan | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background-color: #1f3a5f;
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-    .profile img {
-      width: 160px;
-      border-radius: 50%;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .project-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .project-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .project-card div {
-      padding: 15px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-    }
-  </style>
+
+  <!-- 連結外部 CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- ===== 首頁標題 ===== -->
-  <header>
-    <h1>詹佳恩 Itzel Zhan</h1>
-    <p>Statistics × Information Management × FinTech</p>
-  </header>
+<header>
+  <h1>詹佳恩 Itzel Zhan</h1>
+  <p>Statistics × Information Management × FinTech</p>
 
-  <!-- ===== 關於我 ===== -->
-  <section>
-    <h2>About Me</h2>
+  <!-- ===== LinkedIn / GitHub ===== -->
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/jia-en-zhan/" target="_blank" title="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM7.5 8h4.8v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.2 3.4 6.2 7.8V24h-5V16c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.3V24h-5z"/>
+      </svg>
+    </a>
 
-    <div class="profile">
-      <!-- 
-        【個人照片放這裡】
-        1. 建立 images 資料夾
-        2. 把照片命名為 profile.jpg
-        3. 路徑就是 images/profile.jpg
-      -->
-      <img src="images/me_big.jpg" alt="Profile Photo">
+    <a href="https://github.com/Itzel211" target="_blank" title="GitHub">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 2.6 2.8 3.2.3-.8.6-1.3 1-1.6-2.5-.3-5.1-1.2-5.1-5.6 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 .1.9-.2 1.9-.3 2.9-.3s2 .1 2.9.3c2.1-.4 3-.1 3-.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.9 0 4.4-2.6 5.3-5.1 5.6.4.4 1.1 1.1 1.1 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/>
+      </svg>
+    </a>
+  </div>
+</header>
 
-      <p>
-        我是政大統計系學生，修習資訊管理相關課程，關注資料分析、AI、
-        系統設計與金融科技應用。曾擔任專案與行銷相關職務，
-        喜歡把技術轉成實際能用的產品。
-      </p>
+<section>
+  <h2>About Me</h2>
+
+  <div class="profile">
+
+    <!-- 🌸 花花裝飾容器（只負責動畫，不影響內容） -->
+    <div class="flower-decor">
+      <span>🌸</span>
+      <span>🌼</span>
+      <span>🌸</span>
     </div>
-  </section>
 
-  <!-- ===== 專案展示 ===== -->
-  <section>
-    <h2>Projects</h2>
+    <!-- 🖼 個人照片（長方形＋圓弧） -->
+    <img class="profile-photo" src="images/me_big.jpg" alt="Profile Photo">
 
-    <div class="projects">
+    <p>
+      我是政大統計系學生，修習資訊管理相關課程，關注資料分析、AI、
+      系統設計與金融科技應用，具備專案管理與跨部門協作經驗。
+    </p>
 
-      <!-- ===== chatTai 專案 ===== -->
-      <div class="project-card">
-        <!-- 
-          chatTai 專案圖片
-          檔名：chatTai.png
-          放在 images/chatTai.png
-        -->
-        <img src="images/chatTai.png" alt="chatTai project image">
+  </div>
+</section>
 
-        <div>
-          <h3>chatTai</h3>
-          <p>
-            以聊天介面呈現台灣在地資訊的應用，
-            著重使用者體驗與資訊可讀性。
-          </p>
-        </div>
+
+<section>
+  <div class="cv-block">
+    <h3>Education</h3>
+    <ul>
+      <li><strong>National ChengChi University (NCCU)</strong> — B.S. in Statistics (2022–2026)</li>
+      <li>AI Interdisciplinary Micro Program (Distinction)</li>
+      <li>Big Data Analytics Program, College of Commerce</li>
+      <li>MIS-related coursework: Java, DBMS, Systems Analysis, UX Design</li>
+    </ul>
+  </div>
+
+  <div class="cv-block">
+    <h3>Extracurricular & Leadership</h3>
+    <ul>
+      <li><strong>Marketing Director</strong>, NTU FinTech Club (2024–Present)</li>
+      <li><strong>Project Manager</strong>, NCCU Career Team (Corporate Visits)</li>
+      <li><strong>Head of Academic Dept.</strong>, NCCU Digital Marketing Lab</li>
+    </ul>
+  </div>
+
+  <div class="cv-block">
+    <h3>Project Experience</h3>
+    <ul>
+      <li>XueDAO CONNECT Hackathon — Project Manager</li>
+      <li>NCCU AI × Sustainability Innovation Competition — Project Manager</li>
+    </ul>
+  </div>
+
+  <div class="cv-block">
+    <h3>Skills</h3>
+    <p>Python, JavaScript, SQL, Java, Excel, Data Analysis, UX Design</p>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="projects">
+    <a class="project-card" href="https://github.com/Itzel211/ChatTai-new" target="_blank">
+      <img src="images/chatTai.png" alt="chatTai">
+      <div>
+        <h3>chatTai</h3>
+        <p>Chat-based interface for presenting Taiwan local information with UX focus.</p>
       </div>
+    </a>
 
-      <!-- ===== episodeGO 專案 ===== -->
-      <div class="project-card">
-        <!-- 
-          episodeGO 專案圖片
-          檔名：episodeGO.png
-          放在 images/episodeGO.png
-        -->
-        <img src="images/episodeGO.png" alt="episodeGO project image">
-
-        <div>
-          <h3>episodeGO</h3>
-          <p>
-            內容導向的推薦／整理平台，
-            聚焦主題分類與瀏覽流程設計。
-          </p>
-        </div>
+    <a class="project-card" href="https://github.com/Itzel211/EpisodeGO" target="_blank">
+      <img src="images/episodeGO.png" alt="EpisodeGO">
+      <div>
+        <h3>EpisodeGO</h3>
+        <p>Content-oriented platform focusing on topic organization and browsing flow.</p>
       </div>
+    </a>
+  </div>
+</section>
 
-    </div>
-  </section>
-
-  <!-- ===== 頁尾 ===== -->
-  <footer>
-    © 2026 Jia-En Zhan ｜ GitHub Pages
-  </footer>
+<footer>
+  © 2026 Jia-En Zhan ｜ Personal Portfolio
+</footer>
 
 </body>
 </html>

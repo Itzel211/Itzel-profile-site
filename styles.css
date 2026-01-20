@@ -1,0 +1,278 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #1f3a5f;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* ===== icon 區 ===== */
+.social-links {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  display: flex;
+  gap: 12px;
+}
+.social-links a {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 6px;
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+  fill: #1f3a5f;
+}
+
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 35px;
+  border-radius: 8px;
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* ===== About ===== */
+/* About 區塊的整體排版 */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative; /* 給花花定位用 */
+}
+
+/* 個人照片：長方形＋圓角 */
+.profile-photo {
+  width: 165px;              /* 照片寬度 */
+  height: 225px;             /* 照片高度（長方形） */
+  object-fit: cover;         /* 裁切不變形 */
+  border-radius: 18px;       /* 圓弧角 */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* 卡片陰影 */
+  z-index: 2;                /* 照片在花花上層 */
+}
+
+/* ===== CV ===== */
+.cv-block {
+  margin-bottom: 28px;
+}
+.cv-block h3 {
+  margin-bottom: 8px;
+  color: #1f3a5f;
+}
+.cv-block ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.cv-block li {
+  margin-bottom: 6px;
+}
+
+/* ===== Projects ===== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+}
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.project-card div {
+  padding: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+/* =========================
+   Animations
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Header animation */
+header h1 {
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+header p {
+  opacity: 0;
+  animation: fadeUp 0.9s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Icon floating */
+.social-links a {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Project hover upgrade */
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   Responsive Design (RWD)
+========================= */
+
+/* 平板以下 */
+@media (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile img {
+    width: 150px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    margin: 25px 15px;
+    padding: 28px;
+  }
+}
+
+/* 手機 */
+@media (max-width: 600px) {
+  header {
+    padding: 30px 20px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    position: static;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .project-card img {
+    height: 190px;
+  }
+}
+@media (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flower-decor {
+    position: static; /* 手機版不要浮在旁邊 */
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 260px;
+  }
+}
+
+
+/* =========================
+   Flower Decoration
+========================= */
+
+/* 花花容器：定位在照片旁邊 */
+.flower-decor {
+  position: absolute;
+  left: -30px;     /* 往左一點，貼近照片 */
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;      /* 在照片後面 */
+}
+
+/* 單朵花 */
+.flower-decor span {
+  font-size: 22px;           /* 花的大小 */
+  opacity: 0.7;              /* 半透明，不搶畫面 */
+  animation: floatFlower 4s ease-in-out infinite;
+}
+
+/* 每朵花錯開時間，看起來更自然 */
+.flower-decor span:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.flower-decor span:nth-child(3) {
+  animation-delay: 3s;
+}
+
+/* =========================
+   Flower Animation
+========================= */
+
+/* 花花上下漂浮動畫 */
+@keyframes floatFlower {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* 往上飄 */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
