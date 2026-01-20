@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Jia-En Zhan | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #1f3a5f;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .profile img {
+      width: 160px;
+      border-radius: 50%;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .project-card div {
+      padding: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== 首頁標題 ===== -->
+  <header>
+    <h1>詹佳恩 Itzel Zhan</h1>
+    <p>Statistics × Information Management × FinTech</p>
+  </header>
+
+  <!-- ===== 關於我 ===== -->
+  <section>
+    <h2>About Me</h2>
+
+    <div class="profile">
+      <!-- 
+        【個人照片放這裡】
+        1. 建立 images 資料夾
+        2. 把照片命名為 profile.jpg
+        3. 路徑就是 images/profile.jpg
+      -->
+      <img src="images/profile.jpg" alt="Profile Photo">
+
+      <p>
+        我是政大統計系學生，修習資訊管理相關課程，關注資料分析、AI、
+        系統設計與金融科技應用。曾擔任專案與行銷相關職務，
+        喜歡把技術轉成實際能用的產品。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 專案展示 ===== -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <!-- ===== chatTai 專案 ===== -->
+      <div class="project-card">
+        <!-- 
+          chatTai 專案圖片
+          檔名：chatTai.png
+          放在 images/chatTai.png
+        -->
+        <img src="images/chatTai.png" alt="chatTai project image">
+
+        <div>
+          <h3>chatTai</h3>
+          <p>
+            以聊天介面呈現台灣在地資訊的應用，
+            著重使用者體驗與資訊可讀性。
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== episodeGO 專案 ===== -->
+      <div class="project-card">
+        <!-- 
+          episodeGO 專案圖片
+          檔名：episodeGO.png
+          放在 images/episodeGO.png
+        -->
+        <img src="images/episodeGO.png" alt="episodeGO project image">
+
+        <div>
+          <h3>episodeGO</h3>
+          <p>
+            內容導向的推薦／整理平台，
+            聚焦主題分類與瀏覽流程設計。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 頁尾 ===== -->
+  <footer>
+    © 2026 Jia-En Zhan ｜ GitHub Pages
+  </footer>
+
+</body>
+</html>
