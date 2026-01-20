@@ -1,3 +1,6 @@
+/* =========================
+   Global 基本設定
+========================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,30 +8,31 @@ body {
   color: #333;
 }
 
+/* =========================
+   Header 頂部藍色區塊
+========================= */
 header {
   background-color: #1f3a5f;
   color: white;
   padding: 35px;
   text-align: center;
-  position: relative;
+  position: relative; /* 給 dog / icon 定位 */
 }
-/* =========================
-   Header Dog GIF
-========================= */
 
+/* --- Header 左下角狗狗 GIF --- */
 .header-dog {
   position: absolute;
-  left: 25px;     /* ← 可微調：左右位置 */
-  bottom: -5px;   /* ← 可微調：上下位置 */
-
-  width: 70px;    /* ← 可微調：大小 */
+  left: 25px;      /* ← 左右位置可調 */
+  bottom: -5px;    /* ← 上下位置可調 */
+  width: 70px;     /* ← 大小可調 */
   height: auto;
-
-  pointer-events: none; /* 不影響點擊 */
-  opacity: 0.9;         /* 若太搶眼可調 */
+  pointer-events: none;
+  opacity: 0.9;
 }
 
-/* ===== icon 區 ===== */
+/* =========================
+   Social Icons（LinkedIn / GitHub）
+========================= */
 .social-links {
   position: absolute;
   top: 20px;
@@ -36,21 +40,27 @@ header {
   display: flex;
   gap: 12px;
 }
+
 .social-links a {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: white;
-  border-radius: 6px;
+  border-radius: 8px;
+  animation: float 3s ease-in-out infinite;
 }
+
 .social-links svg {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   fill: #1f3a5f;
 }
 
+/* =========================
+   Section 區塊通用外觀
+========================= */
 section {
   max-width: 1000px;
   margin: 40px auto;
@@ -64,84 +74,146 @@ h2 {
   padding-bottom: 10px;
 }
 
-/* ===== About ===== */
-/* About 區塊的整體排版 */
+/* =========================
+   About / Profile 區塊
+========================= */
 .profile {
   display: flex;
   align-items: center;
   gap: 40px;
-  position: relative; /* 給花花定位用 */
 }
 
-/* 個人照片：長方形＋圓角 */
+/* --- 照片＋花花容器 --- */
+.photo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- 個人照片樣式 --- */
 .profile-photo {
-  width: 165px;              /* 照片寬度 */
-  height: 225px;             /* 照片高度（長方形） */
-  object-fit: cover;         /* 裁切不變形 */
-  border-radius: 18px;       /* 圓弧角 */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* 卡片陰影 */
-  z-index: 2;                /* 照片在花花上層 */
+  width: 165px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
 }
 
-/* ===== CV ===== */
+
+/* =========================
+   Flower Decoration（滑入才出現）
+========================= */
+
+/* --- 花花容器：預設「不可見」 --- */
+.flower-decor {
+  margin-top: 14px;          /* 與照片距離 */
+  display: flex;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* --- 滑進視窗後，JS 會加上 .in-view --- */
+.flower-decor.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 單朵花 --- */
+.flower-decor span {
+  font-size: 20px;
+  opacity: 0.75;
+  animation: floatFlower 4s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+/* --- 錯開漂浮時間 --- */
+.flower-decor span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.flower-decor span:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+/* --- hover 時花花微散開 --- */
+.photo-wrap:hover .flower-decor span:nth-child(1) {
+  transform: translateX(-6px);
+}
+.photo-wrap:hover .flower-decor span:nth-child(3) {
+  transform: translateX(6px);
+}
+
+/* =========================
+   CV 區塊
+========================= */
 .cv-block {
   margin-bottom: 28px;
 }
+
 .cv-block h3 {
   margin-bottom: 8px;
   color: #1f3a5f;
 }
+
 .cv-block ul {
   margin: 0;
   padding-left: 20px;
 }
+
 .cv-block li {
   margin-bottom: 6px;
 }
 
-/* ===== Projects ===== */
+/* =========================
+   Projects 專案卡片
+========================= */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   gap: 30px;
 }
+
 .project-card {
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .project-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
+
 .project-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
+
 .project-card div {
   padding: 18px;
 }
 
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
   padding: 20px;
   color: #777;
 }
+
 /* =========================
-   Animations
+   Animations 動畫定義
 ========================= */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
@@ -150,7 +222,15 @@ footer {
   100% { transform: translateY(0); }
 }
 
-/* Header animation */
+@keyframes floatFlower {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================
+   Header 文字進場動畫
+========================= */
 header h1 {
   animation: fadeUp 0.9s ease-out forwards;
 }
@@ -161,34 +241,18 @@ header p {
   animation-delay: 0.2s;
 }
 
-/* Icon floating */
-.social-links a {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Project hover upgrade */
-.project-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-}
-
 /* =========================
-   Responsive Design (RWD)
+   Responsive Design（RWD）
 ========================= */
-
-/* 平板以下 */
 @media (max-width: 900px) {
   .profile {
     flex-direction: column;
     text-align: center;
   }
 
-  .profile img {
+  .profile-photo {
     width: 150px;
+    height: auto;
   }
 
   .projects {
@@ -201,7 +265,6 @@ header p {
   }
 }
 
-/* 手機 */
 @media (max-width: 600px) {
   header {
     padding: 30px 20px;
@@ -224,70 +287,10 @@ header p {
   .project-card img {
     height: 190px;
   }
-}
-@media (max-width: 900px) {
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .flower-decor {
-    position: static; /* 手機版不要浮在旁邊 */
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .profile-photo {
-    width: 200px;
-    height: 260px;
-  }
-}
-
-
-/* =========================
-   Flower Decoration
-========================= */
-
-/* 花花容器：定位在照片旁邊 */
-.flower-decor {
-  position: absolute;
-  left: -30px;     /* 往左一點，貼近照片 */
-  top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 1;      /* 在照片後面 */
-}
-
-/* 單朵花 */
-.flower-decor span {
-  font-size: 22px;           /* 花的大小 */
-  opacity: 0.7;              /* 半透明，不搶畫面 */
-  animation: floatFlower 4s ease-in-out infinite;
-}
-
-/* 每朵花錯開時間，看起來更自然 */
-.flower-decor span:nth-child(2) {
-  animation-delay: 1.5s;
-}
-.flower-decor span:nth-child(3) {
-  animation-delay: 3s;
-}
-
-/* =========================
-   Flower Animation
-========================= */
-
-/* 花花上下漂浮動畫 */
-@keyframes floatFlower {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* 往上飄 */
-  }
-  100% {
-    transform: translateY(0);
+  .header-dog {
+    width: 35px;
+    left: 15px;
+    bottom: -5px;
   }
 }

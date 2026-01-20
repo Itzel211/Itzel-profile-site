@@ -28,7 +28,7 @@
       </svg>
     </a>
   </div>
-  
+
   <img src="images/dog.gif" class="header-dog" alt="dog">
 
 </header>
@@ -37,23 +37,23 @@
   <h2>About Me</h2>
 
   <div class="profile">
+    <!-- 個人照片 -->
+    <div class="photo-wrap">
+      <img src="images/me_big.jpg" class="profile-photo">
 
-    <!-- 🌸 花花裝飾容器（只負責動畫，不影響內容） -->
-    <div class="flower-decor">
-      <span>🌸</span>
-      <span>🌼</span>
-      <span>🌸</span>
+      <div class="flower-decor">
+        <span>🌸</span>
+        <span>🌼</span>
+        <span>🌷</span>
+      </div>
     </div>
-
-    <!-- 🖼 個人照片（長方形＋圓弧） -->
-    <img class="profile-photo" src="images/me_big.jpg" alt="Profile Photo">
-
-    <p>
+    <!-- 右邊文字 -->
+    <div class="profile-text">
       我是政大統計系學生，修習資訊管理相關課程，關注資料分析、AI、
       系統設計與金融科技應用，具備專案管理與跨部門協作經驗。
-    </p>
-
+    </div>
   </div>
+
 </section>
 
 
@@ -116,6 +116,28 @@
 <footer>
   © 2026 Jia-En Zhan ｜ Personal Portfolio
 </footer>
+
+<script>
+/* =========================
+   Flower Intersection Observer
+   功能：花花滑進視窗才出現
+========================= */
+const flowers = document.querySelectorAll('.flower-decor');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // 只觸發一次
+      }
+    });
+  },
+  { threshold: 0.4 } // 出現 40% 才觸發（可調）
+);
+
+flowers.forEach(flower => observer.observe(flower));
+</script>
 
 </body>
 </html>
