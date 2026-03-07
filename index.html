@@ -31,7 +31,7 @@
     </a>
   </div>
 
-  <img src="images/dog.gif" class="header-dog" alt="dog">
+  <!-- <img src="images/dog.gif" class="header-dog" alt="dog"> -->
   <!-- <img src="images/dog2.gif" class="header-dog2" alt="dog2"> -->
 
 
@@ -96,6 +96,27 @@
   © 2026 Jia-En Zhan ｜ Personal Portfolio
 </footer>
 
+<script>
+/* =========================
+   Flower Intersection Observer
+   功能：花花滑進視窗才出現
+========================= */
+const flowers = document.querySelectorAll('.flower-decor');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // 只觸發一次
+      }
+    });
+  },
+  { threshold: 0.4 } // 出現 40% 才觸發（可調）
+);
+
+flowers.forEach(flower => observer.observe(flower));
+</script>
 
 </body>
 </html>
