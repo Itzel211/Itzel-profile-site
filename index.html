@@ -3,104 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Jia-En Zhan | Portfolio</title>
+  <title>Jia-En Zhan | Statistics × AI Portfolio</title>
+  <meta name="description" content="Jia-En (Itzel) Zhan — Statistics student at NCCU working on LLM applications, data analysis, and system design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-  <h1>詹佳恩 Itzel Zhan</h1>
-  <p>Statistics × AI Applications × Product & System Design</p>
-
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/jia-en-zhan/" target="_blank" title="LinkedIn">
-      <svg viewBox="0 0 24 24">
-        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM7.5 8h4.8v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.2 3.4 6.2 7.8V24h-5V16c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.3V24h-5z"/>
-      </svg>
-    </a>
-    <a href="https://github.com/Itzel211" target="_blank" title="GitHub">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 2.6 2.8 3.2.3-.8.6-1.3 1-1.6-2.5-.3-5.1-1.2-5.1-5.6 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 .1.9-.2 1.9-.3 2.9-.3s2 .1 2.9.3c2.1-.4 3-.1 3-.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.9 0 4.4-2.6 5.3-5.1 5.6.4.4 1.1 1.1 1.1 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/>
-      </svg>
-    </a>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">~/<span>itzel</span>-zhan</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+    </ul>
   </div>
+</nav>
 
-  <img src="images/dog.gif" class="header-dog" alt="dog">
+<header id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">&gt; Statistics × AI Applications × Product &amp; System Design</div>
+      <h1>詹佳恩 Itzel Zhan</h1>
+      <p class="tagline">Senior Statistics student at National Chengchi University, building <b>LLM applications</b> and data-driven systems.</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jia-en-zhan/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM7.5 8h4.8v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.2 3.4 6.2 7.8V24h-5V16c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.3V24h-5z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Itzel211" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 2.6 2.8 3.2.3-.8.6-1.3 1-1.6-2.5-.3-5.1-1.2-5.1-5.6 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 .1.9-.2 1.9-.3 2.9-.3s2 .1 2.9.3c2.1-.4 3-.1 3-.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.9 0 4.4-2.6 5.3-5.1 5.6.4.4 1.1 1.1 1.1 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/>
+          </svg>
+        </a>
+      </div>
+
+      <img src="images/dog.gif" class="header-dog" alt="dog">
+    </div>
+
+    <div class="code">
+      <div class="code-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="file">profile.py</span>
+      </div>
+<pre><span class="k">class</span> <span class="f">Profile</span>:
+    name   = <span class="s">"Jia-En Zhan"</span>
+    school = <span class="s">"NCCU, Statistics"</span>
+    focus  = [<span class="s">"LLM Applications"</span>,
+              <span class="s">"Data Analysis"</span>,
+              <span class="s">"System Integration"</span>]
+    stack  = [<span class="s">"Python"</span>, <span class="s">"SQL"</span>,
+              <span class="s">"JavaScript"</span>, <span class="s">"Java"</span>]</pre>
+    </div>
+  </div>
 </header>
 
-<section>
-  <div class="profile">
-    <div class="photo-wrap">
-      <img src="images/me_cv .jpg" class="profile-photo">
-      <div class="flower-decor">
-        <span>🌸</span>
-        <span>🌼</span>
-        <span>🌸</span>
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>About Me</h2></div>
+    <div class="profile">
+      <div class="photo-wrap">
+        <img src="images/me_cv%20.jpg" class="profile-photo" alt="Jia-En Zhan">
+        <div class="flower-decor">
+          <span>🌸</span>
+          <span>🌼</span>
+          <span>🌸</span>
+        </div>
       </div>
-    </div>
 
-    <div class="profile-text">
-      <h2>About Me</h2>
-      <p>
-        I am a senior Statistics student at National Chengchi University with interdisciplinary training in AI, data analysis, and system design. 
-        I have hands-on experience developing AI applications, integrating front-end and back-end systems, conducting functional testing, and iteratively improving model performance. 
-        I enjoy exploring the potential of Large Language Models (LLMs) and applying research-driven methods to solve real-world business problems.
-      </p>
-      <h2>Skills</h2>
-      <ul>
-        <li><b>Programming:</b> Python, JavaScript, Java</li>
-        <li><b>Data & Tools:</b> SQL, Excel, Data Analysis</li>
-        <li><b>AI & Development:</b> LLM Applications, System Integration, Functional Testing</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Leadership & Experience</h2>
-  <div class="experience">
-
-    <div class="experience-item">
-      <h3>NCCU Career Team – Project Manager</h3>
-      <p>Planned and executed corporate visit projects with companies such as Louis Vuitton, FETnet, and LINE, handling proposal pitching, scheduling, and on-site coordination.</p>
-    </div>
-
-    <div class="experience-item">
-      <h3>NTU Financial Technology Club – Marketing Director</h3>
-      <p>Led marketing strategy and grew social media followers from 700 to 2,700+ while managing a cross-functional marketing team.</p>
-    </div>
-
-    <div class="experience-item">
-      <h3>NCCU Digital Marketing Lab – Head of Academic Department</h3>
-      <p>Led a 35-member industry–academia marketing collaboration project and designed workflows, timelines, and project SOPs.</p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Projects</h2>
-  <div class="projects">
-
-    <a class="project-card" href="https://github.com/Itzel211/ChatTai-new" target="_blank">
-      <img src="images/chatTai.png" alt="chatTai">
-      <div>
-        <h3>chatTai – Taiwanese Hokkien Voice Chatbot</h3>
+      <div class="profile-text">
         <p>
-          Developed an AI voice chatbot for seniors, integrating front-end & back-end systems, performing functional testing, and iteratively improving features. 
-          Selected as a finalist in the AI × Sustainability Innovation Competition and received an 
-          <a href="https://drive.google.com/file/d/1aRzZRUr0iBnsxXHEa7U3ypl0bx3CzH63/view?usp=sharing" target="_blank">Honorable Mention</a>.
+          I am a senior Statistics student at National Chengchi University with interdisciplinary training in AI, data analysis, and system design.
+          I have hands-on experience developing AI applications, integrating front-end and back-end systems, conducting functional testing, and iteratively improving model performance.
+          I enjoy exploring the potential of Large Language Models (LLMs) and applying research-driven methods to solve real-world business problems.
         </p>
+        <div class="stats">
+          <div class="stat"><div class="n">2,700+</div><div class="l">Followers grown from 700</div></div>
+          <div class="stat"><div class="n">35</div><div class="l">Members led in one project</div></div>
+          <div class="stat"><div class="n">Finalist</div><div class="l">AI × Sustainability Competition</div></div>
+        </div>
       </div>
-    </a>
+    </div>
+  </div>
+</section>
 
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Java</span></div>
+      </div>
+      <div class="skill-card">
+        <h3>Data &amp; Tools</h3>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Data Analysis</span></div>
+      </div>
+      <div class="skill-card">
+        <h3>AI &amp; Development</h3>
+        <div class="tags"><span class="tag">LLM Applications</span><span class="tag">System Integration</span><span class="tag">Functional Testing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>Projects</h2></div>
+    <div class="projects">
+
+      <a class="project-card" href="https://github.com/Itzel211/ChatTai-new" target="_blank" rel="noopener">
+        <img src="images/chatTai.png" alt="chatTai">
+        <div>
+          <span class="badge">Honorable Mention · AI × Sustainability Innovation Competition</span>
+          <h3>chatTai – Taiwanese Hokkien Voice Chatbot</h3>
+          <p>
+            Developed an AI voice chatbot for seniors, integrating front-end &amp; back-end systems, performing functional testing, and iteratively improving features.
+            Selected as a finalist in the AI × Sustainability Innovation Competition and received an
+            <a href="https://drive.google.com/file/d/1aRzZRUr0iBnsxXHEa7U3ypl0bx3CzH63/view?usp=sharing" target="_blank" rel="noopener">Honorable Mention</a>.
+          </p>
+          <div class="tags"><span class="tag">LLM</span><span class="tag">Voice AI</span><span class="tag">Full-stack</span><span class="tag">Testing</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>Leadership &amp; Experience</h2></div>
+    <div class="experience">
+
+      <div class="experience-item">
+        <h3>Project Manager</h3>
+        <div class="org">NCCU Career Team</div>
+        <p>Planned and executed corporate visit projects with companies such as Louis Vuitton, FETnet, and LINE, handling proposal pitching, scheduling, and on-site coordination.</p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Marketing Director</h3>
+        <div class="org">NTU Financial Technology Club</div>
+        <p>Led marketing strategy and grew social media followers from 700 to 2,700+ while managing a cross-functional marketing team.</p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Head of Academic Department</h3>
+        <div class="org">NCCU Digital Marketing Lab</div>
+        <p>Led a 35-member industry–academia marketing collaboration project and designed workflows, timelines, and project SOPs.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Jia-En Zhan ｜ Personal Portfolio
+  <div class="wrap">© 2026 Jia-En Zhan ｜ Personal Portfolio</div>
 </footer>
 
 <script>
